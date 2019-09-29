@@ -1,0 +1,117 @@
+@import './variables.scss';
+
+// body {
+//  margin-top: 50px;
+//  background: #f9f1e4;
+// }
+
+.logo-container {
+    width: 250px;
+    height: 180px;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+}
+.square {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+}
+
+.face-top {
+    transform: rotate(-45deg) skew(15deg, 15deg);
+}
+.position {
+    top: 90px;
+    left: 160px;
+}
+.square-1 {
+    background: green;
+    width: 30px;
+    top: 90px;
+    left: 60px;
+    transform: rotate(75deg) skew( 15deg, -45deg);
+    animation: square-1 0.5s .5s 1 forwards;
+}
+.square-2 {
+    background: gold;
+    width: 30px;
+    top: 56px;
+    left: 90px;
+    opacity: 0;
+    animation: square-2 0.7s 0.5s forwards;
+}
+.square-3 {
+    background: violet;
+}
+.square-4 {
+    background: red;
+    animation: square-4 0.5s .6s forwards;
+}
+.square-5 {
+    background: black;
+    top: 61px;
+    left: 133px;
+    height: 36px;
+    opacity: 1;
+    transform: rotate(-45deg) skew(-45deg, 15deg);
+}
+.square-5-1 {
+    background: white;
+    top: 61px;
+    left: 133px; 
+    height: 36px;  
+    width: 40px;
+    transform: rotate(-45deg) skew(-45deg,15deg);
+    animation: square-5a 0.5s .6s forwards;
+}
+
+@keyframes square-1 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        top: 72px;
+        left: 38px;     
+        width: 42px;
+        height: 64px;
+        transform: rotate(45deg) skew(30deg, -15deg);
+        opacity: 1;
+    }
+}
+
+@keyframes square-2 {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        top: 69px;
+        left: 69px;
+        width: 35px;
+        height: 40px;
+        transform: rotate(0deg) skew(40deg, 30deg);
+        opacity: 1;
+    }
+}
+
+@keyframes square-4 {
+    0% {
+        // top: 70px;
+    }
+    100% {
+        top: 39px;
+    }
+}
+
+@keyframes square-5a {   
+    from {
+        border-top: 1px solid red;
+        height: 36px;
+    }
+    to {
+        height: 0;
+        top: 50px;
+        left: 133px;  
+    }
+}
