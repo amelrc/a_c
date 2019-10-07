@@ -1,0 +1,16 @@
+.header {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+    }
+    &__icons {
+        display: flex;
+        margin: 30px;
+    }
+}
+
+.header-icon {
+    margin: 10px;
+}
+
