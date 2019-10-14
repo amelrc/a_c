@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // box-sizing: border-box;
+    // height: 100vh;
+    // position: relative;
+}
+.square-bg {
+    background-color: $yellow;
+    width: 400px;
+    height: 400px;
+    margin: 70px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name, .profession {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+.name{
+    justify-content: center;
+    margin: 0;
+    width: 120%;
+    &--size {
+        font-size: 6em;
+    }
+}
+.hidden {
+    display: none;
+}
+.underlined {
+    color: $dark-purple;
+    font-size: 1.1em;
+    text-decoration: none;
+    background-image: linear-gradient(to right, $dark-purple 0, $dark-purple 100%);
+    background-position: 0 1.1em;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: .3s;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+.profession {
+        color: $dark-purple;
+        position: relative;
+        width: 80%;  
+}
