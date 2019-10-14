@@ -1,13 +1,13 @@
 import React from 'react';
-import BG from '../background';
+import PUC from '../puc';
 import UnderConstruction from '../underConstruction';
 import Contact from '../contact';
 
 const Test = () => {
     return ( 
-        <div className='all'>
+        <div className='container'>
             <UnderConstruction /> 
-            <BG/>
+            <PUC/>
             <Contact />
         </div>
      );

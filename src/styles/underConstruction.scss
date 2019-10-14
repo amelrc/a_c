@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // box-sizing: border-box;
-    // height: 100vh;
-    // position: relative;
 }
 .square-bg {
     background-color: $yellow;
@@ -16,7 +13,6 @@
     flex-direction: column;
     align-items: center;
 }
-
 .name, .profession {
     display: flex;
     text-transform: uppercase;
@@ -30,26 +26,44 @@
         font-size: 6em;
     }
 }
-.hidden {
-    display: none;
-}
-.underlined {
-    color: $dark-purple;
-    font-size: 1.1em;
-    text-decoration: none;
-    background-image: linear-gradient(to right, $dark-purple 0, $dark-purple 100%);
-    background-position: 0 1.1em;
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: .3s;
-    text-transform: uppercase;
-    word-spacing: 5px;
-    &:hover {
-      background-size: 100% 100%;
-    }
-  }
 .profession {
         color: $dark-purple;
         position: relative;
         width: 80%;  
 }
+
+@media (max-width : 375px) {
+    .square-bg {
+        width: 300px;
+        height: 300px;
+        margin: 0;
+    }
+    .name {
+        width: 0;
+        &--size {
+            font-size: 3em;
+        }
+    }
+    .profession {
+        width: 80%;
+    }
+}
+
+@media (max-width: 667px) and (orientation: landscape) {
+    .wrapper {
+        margin-left: 40%;
+    }
+    .square-bg {
+        width: 230px;
+        height: 230px;
+        margin: 0;
+    }
+    .name--size {
+        font-size: 3em;
+    }
+    .profession {
+        font-size: 0.8em;
+        width: 90%;
+    }
+
+  }

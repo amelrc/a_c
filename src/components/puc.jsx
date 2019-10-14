@@ -1,23 +1,33 @@
 import React from 'react';
 
+// const prueba = ['hola', 'world']
+// let element;
+// const test = () => {
+//     for(element of prueba) {
+//         let splitted = element.split('');
+//         console.log(splitted);
+        
+//     }
+// }
 
-const BG = () => {
+
+const PUC = () => {
     return ( 
             <div className="popout">
-                <p>
+                <p className='popout__p'>
                     <span>P</span>
                     <span>A</span>
                     <span>G</span>
                     <span>E</span>
                 </p>
-                <p>
+                <p className='popout__p'>
                     <span>U</span>
                     <span>N</span>
                     <span>D</span>
                     <span>E</span>
                     <span>R</span>
                 </p>
-                <p>
+                <p className='popout__p'>
                     <span>C</span>
                     <span>O</span>
                     <span>N</span>
@@ -35,4 +45,4 @@ const BG = () => {
     )
 }
 
-export default BG;
+export default PUC;

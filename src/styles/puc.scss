@@ -1,8 +1,8 @@
 $t: 2s;
 $d: 0.08em;
 $n: 3;
-$e: cubic-bezier(0.860, 0.000, 0.070, 2.000); 
-$front: $white;
+$e: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+$front: $purple;
 $back: violet;
 
 .popout {
@@ -17,17 +17,22 @@ $back: violet;
 
 	@keyframes ani{
 		0%{
-			transform: translate3d(0,0,0);
-			text-shadow: 0em 0em $back;
-			color: $front;
+			// transform: translate3d(0,0,0);
+			// text-shadow: 0em 0em $back;
+			// color: $front;
 			opacity: 0;
 		}
-		40%{
+		40% {
 			transform: translate3d(0,0,0);
 			text-shadow: 0em 0em $back;
 			color: $front;
 		}
-		90%{
+		60%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em $back;
+			color: $front;
+		}
+		80%{
 			transform: translate3d($d,-$d,0);
 			text-shadow: -$d $d $back;
 			color: $front;
@@ -45,8 +50,24 @@ $back: violet;
 		animation: ani $t infinite alternate $e;
 		@for $i from 1 through $n{
 			&:nth-last-child(#{$i}n){ 
-				animation-delay: -$t*$i/$n/2;
+				animation-delay: -$t*$i/$n/6;
 			}
 		}
 	}	
+}
+@media (max-width : 375px) {
+	.popout {
+		margin: -200px 0 0 0;
+		
+	}
+}
+
+@media (max-width: 667px) and (orientation: landscape) {
+  .popout {
+	  margin: -5%;
+	  padding: 0;
+	  &__p { 
+		margin: 0;
+	}
+  }	
 }
