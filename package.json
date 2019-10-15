@@ -2,7 +2,7 @@
   "name": "a_c",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://amelrc.github.com/a_c/",
+  "homepage": "https://design.amelcaballero.nl",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "node-sass": "^4.12.0",
