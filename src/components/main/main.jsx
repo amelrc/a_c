@@ -6,8 +6,8 @@ import Contact from '../contact';
 const Test = () => {
     return ( 
         <div className='container'>
-            <UnderConstruction /> 
-            <PUC/>
+            <UnderConstruction />
+            {/* <PUC/> */}
             <Contact />
         </div>
      );
