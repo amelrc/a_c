@@ -50,7 +50,7 @@ const domiData = [
 	{
 		id: 5,
 		title: ['HTC Desire 626s'],
-		img: 'img/product-5.png',
+		img: ['img/product-5.png'],
 		price: 24,
 		company: 'htc',
 		info:
