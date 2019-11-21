@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Main from './components/main';
 import Details from './components/Details';
 import PNF from './components/PNF';
@@ -10,9 +10,10 @@ function App() {
 		<Application>
 			<h1>NavBar</h1>
 			<Switch>
-				<Route path='/projects/:id' render={props => <Details {...props} />} />
+				<Route path='/projects/:id' render={props => <Details {...props}/>} />
 				<Route path='/projects' component={Main} />
-				<Route component={PNF} />
+				<Redirect to='/not-found' component={PNF} />
+				<Redirect from='/' exact to='/projects' />
 			</Switch>
 		</Application>
 	);

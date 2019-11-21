@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 class Details extends Component {
 	imageContent = () => {
-		console.log('1', this.props);
+		console.log( this.props);
 		const pathnameId = this.props.location.pathname.split('/')[2];
 		const state = this.props.location.state.data;
 
@@ -49,17 +49,16 @@ class Details extends Component {
 	random = () => {
 		const data = this.props.location.state.data;
 		const pathnameId = this.props.location.pathname.split('/')[2];
-		// let random = data[Math.floor(Math.random() * data.length)];
-
+		
 		let randomProjects = [];
-		let r = Math.floor(Math.random() * data.length);
-		console.log('this is the r',r)
-		while (randomProjects.length < 4) {
-			
-			if (randomProjects.indexOf(r) === -1) randomProjects.push(r);
-		}
-		console.log('gafgasdgasg', randomProjects);
-		console.log('gafgasdgasg', pathnameId);
+	
+		// while (randomProjects.length < 4) {
+		// 	let random = data[Math.floor(Math.random() * data.length)];
+
+		// 	if (randomProjects.indexOf(random) === -1 ) randomProjects.push(random);
+		// }
+		console.log('new array', randomProjects);
+		// console.log('gafgasdgasg', pathnameId);
 	};
 
 	render() {
@@ -67,21 +66,6 @@ class Details extends Component {
 			<Wrapper>
 				{this.random()}
 				{this.imageContent()}
-
-				{/* <h1>{item.title}</h1> */}
-				{/* <div>{
-					data.map(item => (
-						<Link
-								to={{
-									pathname: `/projects/${item.id}`,
-									state: this.state
-								}}
-							>
-								<img src={item.img[0]} alt={item.id} />
-								<h1>{item.title}</h1>
-							</Link>
-					))}
-					</div> */}
 			</Wrapper>
 		);
 	}

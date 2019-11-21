@@ -12,21 +12,28 @@ class Main extends Component {
 	componentDidMount() {
 		this.setState({ data: getData() });
 	}
-
+	
+	handleCurrentProject = item => {
+		console.log('item', item)
+		this.setState({ currentProject: item})
+	}
+	
 	render() {
+		console.log('updated state', this.state.currentProject)
+		const { data } = this.state;
 		return (
 			<Wrapper>
+				
 				<div>
-					
-					{this.state.data.map(item => (
+					{data.map(item => (
 						<Item key={item.id}>
 							<Link
 								to={{
+									state: this.state,
 									pathname: `/projects/${item.id}`,
-									state: this.state
 								}}
 							>
-								<img src={`/${item.img[0]}`} alt={item.id} />
+								<img onClick={() => this.setState({ currentProject: item})} src={`/${item.img[0]}`} alt={item.id} />
 							</Link>
 						</Item>
 					))}
