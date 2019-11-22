@@ -51,20 +51,25 @@ class Details extends Component {
 		const pathnameId = this.props.location.pathname.split('/')[2];
 		
 		let randomProjects = [];
-	
-		// while (randomProjects.length < 4) {
-		// 	let random = data[Math.floor(Math.random() * data.length)];
+		while (randomProjects.length < 4) {
+			let random = data[Math.floor(Math.random() * data.length)];
 
-		// 	if (randomProjects.indexOf(random) === -1 ) randomProjects.push(random);
-		// }
+			if (randomProjects.indexOf(random) === -1 ) randomProjects.push(random);
+		}
 		console.log('new array', randomProjects);
-		// console.log('gafgasdgasg', pathnameId);
+		
+				return (
+					randomProjects.map(project => (
+						
+						<h1>{project.title}</h1>
+					))
+				)
 	};
 
 	render() {
 		return (
 			<Wrapper>
-				{this.random()}
+				{/* {this.random()} */}
 				{this.imageContent()}
 			</Wrapper>
 		);

@@ -47,7 +47,7 @@ export default Main;
 
 const Wrapper = styled.div`
 	width: 94%;
-	background-color: blueviolet;
+	padding-top: 80px;
 `;
 
 const Item = styled.div`
