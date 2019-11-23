@@ -1,43 +1,26 @@
 import React, { Component } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 import { Link } from 'react-router-dom';
-import { getData } from '../data';
 import styled from 'styled-components';
 
 class Main extends Component {
-	state = {
-		data: [],
-		currentProject: [],
-	};
-
-	componentDidMount() {
-		this.setState({ data: getData() });
-	}
-	
-	handleCurrentProject = item => {
-		console.log('item', item)
-		this.setState({ currentProject: item})
-	}
-	
+	static contextType = ThemeContext;
 	render() {
-		console.log('updated state', this.state.currentProject)
-		const { data } = this.state;
+		const { data } = this.context;
 		return (
 			<Wrapper>
-				
-				<div>
-					{data.map(item => (
-						<Item key={item.id}>
-							<Link
+				{data.map(item => (
+					<Item key={item.id}>
+						{/* <Link
 								to={{
 									state: this.state,
-									pathname: `/projects/${item.id}`,
+									pathname: `/projects/${item.id}`
 								}}
-							>
-								<img onClick={() => this.setState({ currentProject: item})} src={`/${item.img[0]}`} alt={item.id} />
-							</Link>
-						</Item>
-					))}
-				</div>
+							> */}
+						<img className='image' src={item.img[0]} alt={item.id} />
+						{/* </Link> */}
+					</Item>
+				))}
 			</Wrapper>
 		);
 	}
@@ -45,13 +28,17 @@ class Main extends Component {
 
 export default Main;
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
 	width: 94%;
-	padding-top: 80px;
+	padding-top: 60px;
 `;
 
-const Item = styled.div`
+const Item = styled.figure`
 	margin-bottom: 10px;
-	background-color: aqua;
-	text-align: center;
+	height: 100%;
+	width: 100%;
+	// border: 2px red solid;
+	.image {
+		width: 100%;
+	}
 `;

@@ -2,7 +2,7 @@ const domiData = [
 	{
 		id: 1,
 		title: 'Google Pixel - Black',
-		img: ['img/product-1.png', 'img/product-2.png', 'img/product-3.png', 'img/product-4.png', 'img/product-5.png', 'img/product-6.png'],
+		img: ['img/cwsla.png', 'img/product-2.png', 'img/product-3.png', 'img/product-4.png', 'img/product-5.png', 'img/product-6.png'],
 		price: 10,
 		company: 'GOOGLE',
 		info:
@@ -14,7 +14,7 @@ const domiData = [
 	{
 		id: 2,
 		title: 'Samsung S7',
-		img: ['img/product-2.png','img/product-1.png','img/product-3.png', 'img/product-4.png', 'img/product-5.png', 'img/product-6.png'],
+		img: ['img/tss.png','img/product-1.png','img/product-3.png', 'img/product-4.png', 'img/product-5.png', 'img/product-6.png'],
 		price: 16,
 		company: 'SAMSUNG',
 		info:
@@ -26,7 +26,7 @@ const domiData = [
 	{
 		id: 3,
 		title: 'HTC 10 - Black',
-		img: ['img/product-3.png', 'img/product-1.png', 'img/product-2.png', 'img/product-4.png', 'img/product-5.png', 'img/product-6.png'],
+		img: ['img/ac.png', 'img/product-1.png', 'img/product-2.png', 'img/product-4.png', 'img/product-5.png', 'img/product-6.png'],
 		price: 8,
 		company: 'htc',
 		info:
@@ -38,7 +38,7 @@ const domiData = [
 	{
 		id: 4,
 		title: 'HTC 10 - White',
-		img: ['img/product-4.png'],
+		img: ['img/wps.png'],
 		price: 18,
 		company: 'htc',
 		info:
@@ -50,7 +50,7 @@ const domiData = [
 	{
 		id: 5,
 		title: ['HTC Desire 626s'],
-		img: ['img/product-5.png'],
+		img: ['img/hpp.png'],
 		price: 24,
 		company: 'htc',
 		info:
