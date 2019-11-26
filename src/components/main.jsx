@@ -11,12 +11,13 @@ class Main extends Component {
 			<Wrapper>
 				{data.map(item => (
 					<Item key={item.id}>
-						{/* <Link
-								to={{
+						{/* <Link */}
+							
+								{/* to={{
 									state: this.state,
-									pathname: `/projects/${item.id}`
-								}}
-							> */}
+									pathname: `/projects/${item.id}` */}
+								{/* }} */}
+								{/* > */}
 						<img className='image' src={item.img[0]} alt={item.id} />
 						{/* </Link> */}
 					</Item>
@@ -30,7 +31,7 @@ export default Main;
 
 const Wrapper = styled.main`
 	width: 94%;
-	padding-top: 60px;
+	padding-top: 70px;
 `;
 
 const Item = styled.figure`
