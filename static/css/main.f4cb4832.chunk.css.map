@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,EACE,QAAS,CACT,SACF,CAEA,KACE,uEAEF","file":"main.f4cb4832.chunk.css","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n"]}
